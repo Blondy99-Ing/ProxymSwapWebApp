@@ -1,0 +1,21 @@
+{
+  "id": "/",
+  "name": "ProxymSwapWeb",
+  "short_name": "ProxymSwap",
+  "lang": "fr",
+  "dir": "ltr",
+
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+
+  "description": "Application Web de swap pour l’échange des batteries",
+  "background_color": "#F3F3F3",
+  "theme_color": "#DCDB32",
+
+  "icons": [
+    { "src": "/images/icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/images/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
