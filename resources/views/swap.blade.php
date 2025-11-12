@@ -95,10 +95,15 @@ body {
 }
 .back-btn, #refreshBtn {
   position: absolute; top: 12px;
-  background: #1b1b1b; color: var(--brand);
+  background: var(--brand); color: var(--bg);
   border: none; border-radius: 10px;
   padding: 8px 12px; font-size: 1.2rem;
   cursor: pointer;
+  text-decoration:none;
+  font-size: 2rem;
+  font-style: bold;
+  font: arial; 
+  
 }
 .back-btn { left: 12px; }
 #refreshBtn { right: 12px; }

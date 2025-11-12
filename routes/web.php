@@ -36,9 +36,8 @@ Route::middleware(['auth'])->group(function () {
 
     //ravitaillement
     Route::get('/ravitaillements', [\App\Http\Controllers\RavitaillementController::class, 'index'])->name('ravitaillement.index');
+    
     //api ravitaillement
-   
-
     Route::get('/ravitaillement/batteries', [RavitaillementController::class, 'getAllBatteries']);
     Route::get('/ravitaillement/batteries/{id}', [RavitaillementController::class, 'getBatteriesByAgence']);
     Route::post('/ravitaillement', [RavitaillementController::class, 'store']);

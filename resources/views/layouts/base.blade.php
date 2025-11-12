@@ -48,13 +48,13 @@
     header.hero h1 {
         margin: 0;
         color: var(--text);
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
     header.hero p {
         margin-top: 8px;
         color: var(--text);
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .home-main {

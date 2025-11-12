@@ -84,9 +84,14 @@ body {
 }
 .back-btn, #refreshBtn {
   position: absolute; top: 12px;
-  background: #1b1b1b; color: var(--brand);
-  border: none; border-radius: 10px;
-  padding: 8px 12px; font-size: 1.2rem; cursor: pointer;
+  background: var(--brand); color: var(--bg);
+  padding: 1px 2px; font-size: 1.2rem; cursor: pointer;
+  border:none; border-radius: 10px; 
+  border-color: #1010101a;
+  z-index: 1000;
+  font-size: 2rem;
+  font-family: bold;
+  text-decoration:none;
 }
 .back-btn { left: 12px; }
 #refreshBtn { right: 12px; }

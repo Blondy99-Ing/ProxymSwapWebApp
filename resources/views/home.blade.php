@@ -4,8 +4,8 @@
 
 @section('content')
 <header class="hero">
-    <h1>👋 Bienvenue sur ProxymSwapWeb</h1>
-    <p>Bonjour <strong>{{ Auth::user()->nom }} {{ Auth::user()->prenom }}</strong> !</p>
+    <h1 style="color:#101010;">Bienvenue sur ProxymSwapWeb 👋 </h1>
+    <p style="color:#101010;">Bonjour <strong>{{ Auth::user()->nom }} {{ Auth::user()->prenom }}</strong> !</p>
 </header>
 
 <main class="home-main">
