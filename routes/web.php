@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SwapController;
 use App\Http\Controllers\RavitaillementController;
+use App\Http\Controllers\ControlBatterieController;
+
 
 
 Route::middleware(['auth'])->group(function () {
@@ -41,6 +43,36 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/ravitaillement/batteries', [RavitaillementController::class, 'getAllBatteries']);
     Route::get('/ravitaillement/batteries/{id}', [RavitaillementController::class, 'getBatteriesByAgence']);
     Route::post('/ravitaillement', [RavitaillementController::class, 'store']);
+
+
+
+
+ 
+
+
+
+// Route principale qui charge la page HTML/Blade
+Route::get('/batteries', [ControlBatterieController::class, 'index'])->name('batteries.control');
+
+// ===========================================================
+// API (Lecture des statuts)
+// ===========================================================
+
+// 1. OPTIMISATION : Route pour récupérer TOUS les statuts en une seule requête (Batch)
+// C'est celle qui sera utilisée au chargement initial de la page par le JavaScript.
+Route::get('/batteries/api/status/all', [ControlBatterieController::class, 'getAllBatteriesStatus']);
+
+// 2. Route pour récupérer le statut d'une SEULE batterie (Utilisée après une commande pour rafraîchir la carte)
+Route::get('/batteries/api/status/{macId}', [ControlBatterieController::class, 'getBatteryStatus']);
+
+// ===========================================================
+// API (Commande)
+// ===========================================================
+
+// Route pour envoyer les commandes ON/OFF (Charge ou Décharge)
+// Le MAC ID et l'action sont passés dans le corps de la requête (POST)
+Route::post('/batteries/api/command', [ControlBatterieController::class, 'sendBmsCommand']);
+
 
 });
 

@@ -34,6 +34,13 @@
                 <p>Ravitailler une station .</p>
             </div>
         </a>
+         <a href="{{ route('batteries.control') }}" class="home-card">
+            <div class="icon">🔁</div>
+            <div class="text">
+                <h3>Control Batteries </h3>
+                <p>Couper et Rallumer les Batteries</p>
+            </div>
+        </a>
 
         <!-- Déconnexion -->
         <form method="POST" action="{{ route('logout') }}" class="home-card logout-card">

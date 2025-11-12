@@ -47,13 +47,13 @@
 
     header.hero h1 {
         margin: 0;
-        color: var(--text);
+        color: #101010;
         font-size: 2rem;
     }
 
     header.hero p {
         margin-top: 8px;
-        color: var(--text);
+        color: #101010;
         font-size: 1.2rem;
     }
 
@@ -146,6 +146,20 @@
 
 
 
+.back-btn, #refreshBtn {
+  position: absolute; top: 12px;
+  background: var(--brand); color: var(--bg);
+  padding: 1px 2px; font-size: 1.2rem; cursor: pointer;
+  border:none; border-radius: 10px; 
+  border-color: #1010101a;
+  z-index: 1000;
+  font-size: 2rem;
+  font-family: bold;
+  text-decoration:none;
+}
+.back-btn { left: 12px; }
+#refreshBtn { right: 12px; }
+
 
 /* === TOAST ANDROID-LIKE === */
 
@@ -208,6 +222,7 @@
 </button>
 
   <div id="app" class="container">
+   
 
 
     @yield('content')
